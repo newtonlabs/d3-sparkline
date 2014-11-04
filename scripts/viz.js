@@ -21,7 +21,7 @@ d3.charts.sparkline = function () {
       svg = void 0;
 
   my.setup = function(data) {
-    lines = _.map(data, function(d) { return { x: d[my.xAxis()], y: d[my.yAxis()] }; } );
+    lines = data.map(function(d) { return { x: d[my.xAxis()], y: d[my.yAxis()] }; } );
   };
 
   my.chart = function() {
@@ -50,6 +50,7 @@ d3.charts.sparkline = function () {
         .append('circle')
         .attr('r', 2)
         .attr('fill', 'white')
+        .attr('fill-opacity', 0)
         .attr('stroke', my.color())
         .attr('class', 'dot')
     dot.transition().duration(1000)
