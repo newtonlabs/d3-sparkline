@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-3">
+        <table class="table table-bordered">
+          <tr>
+            <th>Sales</th>
+            <th>Change</th>
+            <th>Trend</th>
+            <th>Target</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>10%</td>
+            <td><div id="chart1"></div></td>
+            <td>110</td>
+          </tr>
+          <tr>
+            <td>85</td>
+            <td>15%</td>
+            <td><div id="chart2"></div></td>
+            <td>65</td>
+          </tr>
+          <tr>
+            <td>95</td>
+            <td>5%</td>
+            <td><div id="chart3"></div></td>
+            <td>200</td>
+          </tr>
+         <tr>
+            <td>95</td>
+            <td>5%</td>
+            <td><div id="chart4"></div></td>
+            <td>200</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="vendor/d3.min.js"></script>
+  <script src="vendor/topojson.v1.min.js"></script>
+
+  <!-- A base function for setting up the SVG and chart container -->
+  <script src="scripts/base.js"></script>
+
+  <!-- The main visualization code -->
+  <script src="scripts/viz.js"></script>
+  <script src="vendor/lodash.js"></script>
+
+  <!-- The script acts as a proxy to call the visualization and draw
+  it with sample data -->
+  <script src="factories/viz_factory.js"></script>
+</html>
+
